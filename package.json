@@ -1,0 +1,31 @@
+{
+  "name": "quan-ly-sieu-thi-mini",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hệ thống quản lý siêu thị mini bán đồ ăn vặt và đồ chơi (Spring Boot + React Vite)",
+  "scripts": {
+    "web": "node ./scripts/start-web.js",
+    "start": "node ./scripts/start-web.js",
+    "dev": "node ./scripts/start-web.js",
+    "migrate": "node ./scripts/migrate-xampp.js",
+    "db:migrate": "node ./scripts/migrate-xampp.js",
+    "snapshot": "node ./scripts/snapshot-xampp.js",
+    "db:snapshot": "node ./scripts/snapshot-xampp.js",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "cd backend && mvnw.cmd spring-boot:run",
+    "backend:h2": "cd backend && mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=h2",
+    "postinstall": "npm --prefix frontend install",
+    "install:frontend": "npm --prefix frontend install"
+  },
+  "keywords": [
+    "mini-market",
+    "snacks",
+    "toys",
+    "react",
+    "spring-boot",
+    "mysql",
+    "xampp"
+  ],
+  "author": "",
+  "license": "ISC"
+}

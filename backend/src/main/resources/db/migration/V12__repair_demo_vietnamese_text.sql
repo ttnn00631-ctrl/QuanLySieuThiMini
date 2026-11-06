@@ -1,0 +1,1 @@
+-- Không còn dữ liệu demo thiết bị cũ cần sửa trong đề tài siêu thị mini.

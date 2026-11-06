@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: mini-market-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-dev-root-change-me}
+      MYSQL_DATABASE: QuanLySieuThiMini
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mini-market-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  mini-market-data:

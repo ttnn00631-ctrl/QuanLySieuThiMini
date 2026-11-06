@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+.env
+.env.*.local
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+backend/target/
+backend/computer_assets*
+.tools/
+=======
+.env
+.env.*.local
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+backend/target/
+backend/computer_assets*
+.tools/
+>>>>>>> origin/main
+*.log

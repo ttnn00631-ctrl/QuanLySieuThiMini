@@ -1,0 +1,33 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: mini-market-manager
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/QuanLySieuThiMini?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: ${FLYWAY_ENABLED:false}
+    baseline-on-migrate: true
+    validate-on-migrate: false
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:ZGV2ZWxvcG1lbnQtb25seS1jaGFuZ2UtdGhpcy1zZWNyZXQta2V5LTIwMjY=}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:480}
+  admin:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:123}
+
+springdoc:
+  swagger-ui:
+    path: /docs

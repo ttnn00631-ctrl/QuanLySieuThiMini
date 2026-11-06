@@ -1,0 +1,2 @@
+-- Không tạo dữ liệu bàn giao thiết bị mẫu trong đề tài siêu thị mini.
+-- Bảng assignment_history được giữ để tương thích các chức năng lịch sử cũ.
